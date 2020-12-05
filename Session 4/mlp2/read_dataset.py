@@ -69,11 +69,12 @@ class Net(nn.Module):
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
         return x
+    
 net = Net()
 
 #choose optimizer and loss function
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.SGD(net.parameters(), lr=lr)
+optimizer = torch.optim.Adam(net.parameters(), lr=lr)
 
 #train
 for epoch in range(num_epoch):

@@ -39,3 +39,4 @@ for t in range(500):
     # Update weights using gradient descent
     w1 -= learning_rate * grad_w1
     w2 -= learning_rate * grad_w2
+    
